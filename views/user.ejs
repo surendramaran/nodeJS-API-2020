@@ -1,0 +1,44 @@
+<%- include ("partials/header") %>
+    <div class="user-section">
+        <div class="user-image-div">
+            <img class="user-image" src="<%= user.profile_pic_mid %>" alt="img">
+        </div>
+        <div class="user-name-div">
+            <span class="user-name"><%= user.full_name %> </span>
+        </div>
+        <div class="user-edit-div">
+            <button class="user-edit-button" id="editProfile" type="button">Edit Profile</button>
+        </div>
+    </div>
+    <div class="profile-details-back">
+        <div class="profile-details-contents">
+            <span id="profileDetailsClose" class="profile-details-close">+</span>
+            <div>
+                <img class="profile-d-image" id="profileDetailsImage" src="" alt="">
+            </div>
+            <div>
+                <span class="profile-d-name" id="profileDetailsName"></span>
+            </div>
+            <div>
+                <span class="profile-d-gender" id="profileDetailsGender"></span>
+            </div>
+            <div>
+                <span class="profile-d-dob" id="profileDetailsDOB"></span>
+            </div>
+            <div>
+                <span class="profile-d-username" id="profileDetailsUsername"></span>
+            </div>
+            <div>
+                <span class="profile-d-num" id="profileDetailsNumber"></span>
+            </div>
+            <div>
+                <span class="profile-d-at" id="profileDetailsAt"></span>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="user-all-packs" id="userAllPacks">
+        </div>
+    </main>
+    <script src="/js/userScript.js"></script>
+<%- include ("partials/footer") %>

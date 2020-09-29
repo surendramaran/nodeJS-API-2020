@@ -1,0 +1,25 @@
+    <%- include ("partials/header") %>
+    <div class="pack-file">
+        <% if (isMember) { %><div></div><% } %>
+        <h2 id="" class="pack-file-name"><%= packName %></h2>
+        <% if (isMember) { %><div class="pack-file-add" >
+            <button class="pack-file-add-btn" type="button" id="addFileButton">+ Add File</button>
+        </div><% } %>
+    </div>
+    <% if (isMember) { %><%- include ("partials/forms/newFile") %><% } %>
+    <main>
+        <div class="file-all" id="addUpdatedFile">
+            <% files.forEach( (f) => { %><div class="file-file" id="">
+                <div>
+                    <img class="file-image" src="<%= f.image %>" alt="">
+                </div>
+                <div>
+                    <span class="file-uploader"><%= f.uploaded_by %> </span>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </main>
+    <% if (isMember) { %><script src="/js/addFile.js"></script><% } %>
+    <script src="/js/sse.js"></script>
+    <%- include ("partials/footer") %>  

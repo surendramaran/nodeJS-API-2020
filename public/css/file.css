@@ -1,0 +1,53 @@
+.pack-file {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pack-file-name {
+    font-size: 40px;
+}
+
+.pack-file-add-btn{
+    padding: 3px;
+}
+
+.file-all{
+    margin: auto 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+}
+
+.file-file {
+    z-index: 1;
+    position: relative;
+    margin: 1px;
+}
+
+.file-image {
+    width: 220px;
+    height: 220px;
+}
+
+.file-uploader {
+    display: none;
+    position: absolute;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+    bottom: 3px;
+    height: 15%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #f0f0f0;
+    width: 100%;
+}
+
+.file-file:hover .file-uploader {
+    display: flex;
+}
+
+.file-file:focus .file-uploader {
+    display: flex;
+}

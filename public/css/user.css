@@ -1,0 +1,75 @@
+.user-section {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.user-image-div{
+    display: inline-block;
+    margin: 20px;
+    margin-bottom: auto;
+}
+
+.user-image{
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+}
+
+.user-name-div{
+    display: inline-block;
+    justify-content: center;
+}
+
+.user-name{
+    position: relative;
+    bottom: 20px;
+    font-size: 3em;
+}
+
+.user-edit-div {
+    display: flex;
+    justify-content: flex-end;
+    margin: auto 10px 10px auto;
+}
+
+.user-edit-button{
+    color: #333;
+    padding: 0.3em;
+    font-size: 1em;
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+
+.profile-details-back {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.profile-details-contents {
+    width: 30%;
+    height: 60%;
+    padding: 5%;
+    background-color: white;
+    border-radius: 2px;
+    position: relative;
+}
+
+.profile-details-close {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    transform: rotate(45deg);
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.profile-d-image {
+    width: 100px;
+    height: 100px;
+}

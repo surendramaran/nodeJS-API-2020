@@ -1,0 +1,45 @@
+.explore-all-packs, .user-all-packs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.explore-pack, .user-pack {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 5px;
+    padding: 1px;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+}
+
+    .explore-pack:hover, .user-pack:hover {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 5px;
+        padding: 0;
+        border: 2px solid #e0e0e0;
+        /* box-shadow: 1px 1px #888888; */
+    }
+
+.explore-pack-link, .user-pack-link {
+    text-decoration: none;
+    color: #404040;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.explore-pack-admin, .explore-pack-div, .explore-pack-name, .user-pack-admin, .user-pack-div, .user-pack-name{
+    display: block;
+}
+
+.explore-pack-name, .user-pack-name{
+    font-size: 1.2em;
+}
+
+.explore-pack-admin, user-pack-admin {
+    font-size: 0.8em;
+    align-items: flex-end;
+}

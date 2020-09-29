@@ -1,0 +1,118 @@
+.form-login-back, .form-signup-back, .form-create-back, .form-addFile-back {
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.form-login-content, .form-signup-content, .form-create-content, .form-addFile-content {
+    width: 30%;
+    height: 60%;
+    padding: 5%;
+    background-color: white;
+    border-radius: 2px;
+    text-align: center;
+    position: absolute;
+}
+
+.form-login-close, .form-signup-close, .form-create-close, .form-addFile-close {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    transform: rotate(45deg);
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.signup-show-pp-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #d0d0d0;
+}
+
+.signup-fields-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-fields-2{
+    display: none;
+    flex-direction: column;
+}
+
+/* Create Form Add Names */
+
+.create-fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-name-div{
+    position: relative;
+}
+
+.create-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-name-input{
+    display: none;
+    width: 100%;
+}
+
+.create-search-name{
+    /* display: flex; */
+    display: none;
+    position: absolute;
+    left: 0;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    border: solid 1px #d0d0d0;
+    border-radius: 1px;
+}
+/* Names Reults */
+.create-search-name li {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.create-search-name li:hover {
+    background-color: #f0f0f0;
+}
+
+.create-search-name li img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+
+
+/* create-add-name-id {
+} */
+
+.create-result-close {
+    cursor: pointer;
+}

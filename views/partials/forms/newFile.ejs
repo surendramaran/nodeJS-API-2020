@@ -1,0 +1,18 @@
+    <div class="form-addFile-back">
+        <div class="form-addFile-content">
+            <span class="form-addFile-close">+</span>
+            <form action="/pack/<%= packID %>/new" role="form" method="POST" class="form-addFile-form" enctype="multipart/form-data">
+                <fieldset class="">
+                    <div class="">
+                        <legend>Add File</legend>
+                    </div>
+                    <div class="">
+                        <input type="file" name="photo" required="required">
+                    </div>
+                    <div class="">
+                        <input type="submit" value="addFile">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>

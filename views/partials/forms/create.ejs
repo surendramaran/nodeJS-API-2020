@@ -1,0 +1,33 @@
+    <div class="form-create-back">
+        <div class="form-create-content">
+            <span class="form-create-close">+</span>
+            <form action="/create" method="POST" class="form-create-form">
+                <fieldset class="create-fieldset">
+                    <div class="create-form-fields">
+                        <legend>Create Pack</legend>
+                    </div>
+                    <div class="create-form-fields">
+                        <input type="text" id="createPackName" name="packname" required="required" autofocus="autofocus" placeholder="Pack Name">
+                    </div>
+                    <div class="create-form-fields create-result-name" id="createResult"></div>
+                    <div class="create-form-fields create-name" id="createAdd">
+                        <button id="createAddNameButton" class="create-name-btn" type="button">Add Names</button>
+                        <div class="create-name-div">
+                            <input id="createAddName" class="create-name-input" type="text" placeholder="Add Names">
+                            <ul class="create-search-name" id="createAddList"></ul>
+                        </div>
+                    </div>
+                    <input id="createAllNames" type="text" name="name" value="" hidden>
+                    <div class="create-form-fields">
+                        <input type="radio" name="packtype" value="public" required="required">
+                        <label for="public">Public</label>
+                        <input type="radio" name="packtype" value="private" required="required">
+                        <label for="private">Private</label>
+                    </div>
+                    <div class="create-form-fields">
+                        <input type="submit" name="submit" value="Create">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>

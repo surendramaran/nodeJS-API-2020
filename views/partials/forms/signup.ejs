@@ -1,0 +1,36 @@
+    <div class="form-signup-back">
+        <div class="form-signup-content">
+            <span class="form-signup-close">+</span>
+            <form action="/signup" method="POST" class="form-signup-form">
+                <fieldset class="fieldset">
+                    <div class="formdiv">
+                        <legend>Sign Up!</legend>
+                    </div>
+                    <div class="signup-fields-1">
+                        <div class="">
+                            <input type="text" id="signupName" name='name' placeholder="Full Name" required="required">
+                        </div>
+                        <div class="">
+                            <input type="text" id="signupUsername" name="username"  placeholder="Username" required="required">
+                        </div>
+                        <div class="">
+                            <input type="password" id="signupPassword" name="password" placeholder="Password" required="required">
+                        </div>
+                        <div class="">
+                            <input type="text" id="signupPhone" name="phone" placeholder="Phone Number" required="required">
+                            <button id="signupPhoneVerifyButton" type="button">Verify</button>
+                            <span id="signupPhoneTryAgain" style="display: none;color: red;">Try Again</span>
+                        </div>
+                    </div>
+                    <div class="signup-fields-2">
+                        <div class="">
+                            <input type="text" name="otp" max="6" min="6" placeholder="Verification Code" required="required">
+                        </div>
+                        <div class="">
+                            <input type="submit" value="Sign Up">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
