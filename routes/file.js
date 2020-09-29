@@ -26,7 +26,7 @@ router.post('/pack/:ID/new', upload.single('photo'), authenticateFileToken, asyn
                         (pack_admin = ${userID} OR member1 = ${userID} OR member2 = ${userID} OR member3 = ${userID}
                             OR member4 = ${userID} OR member5 = ${userID} OR member6 = ${userID}
                             OR member7 = ${userID} OR member8 = ${userID} OR member9 = ${userID})`
-            connection.query(q, (error, rows1)=>{
+            connection.query(q, async (error, rows1)=>{
                 if(error){
                     console.log(error)
                     res.sendStatus(500)
