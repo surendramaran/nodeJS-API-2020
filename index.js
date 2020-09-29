@@ -23,4 +23,4 @@ app.use(packRoutes)
 app.use(fileRoutes)
 app.use(userRoutes)
 
-app.listen(3000, () => console.log("server ready"))
+app.listen(process.env.PORT, () => console.log("server ready"))
