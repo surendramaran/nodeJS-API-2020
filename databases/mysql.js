@@ -7,7 +7,9 @@ const connection = mysql.createConnection({
     password: process.env.AZURE_SERVER_PASSWORD,
     database: process.env.AZURE_SERVER_DATABASE,
     port: 3306,
-    ssl: {ca: fs.readFileSync('../certificates/BaltimoreCyberTrustRoot.crt.pem')}
+    ssl: {
+        ca: fs.readFileSync('../certificates/BaltimoreCyberTrustRoot.crt.pem')
+    }
 });
 
 connection.connect((error) => {
