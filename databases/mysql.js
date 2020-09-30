@@ -1,4 +1,5 @@
 const mysql = require("mysql2");
+const fs = require("fs")
 
 const connection = mysql.createConnection({
     host: process.env.AZURE_SERVER_HOST,
@@ -6,7 +7,7 @@ const connection = mysql.createConnection({
     password: process.env.AZURE_SERVER_PASSWORD,
     database: process.env.AZURE_SERVER_DATABASE,
     port: 3306,
-    ssl: true
+    ssl: {ca: fs.readFileSync('../certificates/BaltimoreCyberTrustRoot.crt.pem')}
 });
 
 connection.connect((error) => {
