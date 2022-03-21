@@ -8,19 +8,30 @@ const client = require('../databases/redis')
 const f2s = require("../services/fast2sms")
 
 router.post("/signup/verifyphone", (req, res) => {
+    console.log(req.body)
     const phone = req.body.phone
     const name = req.body.name
     const otp = parseInt(crypto.randomBytes(6).toString('hex'), 32).toString().slice(4, 10)
+    console.log(otp)
     const trimName = name.substring(0, 32);
     connection.query(`SELECT phone FROM users WHERE phone = ${phone}`, (error, rows) =>{
         if (error){
+            console.log(1)
             console.log(error)
             res.sendStatus(500)
         } else {
+            console.log(2)
             if (rows.length > 0) {
                 res.status(400)
                 res.send("Phone Already Exists")    
             } else {
+                console.log(3)
+                f2s.headers({
+                    "content-type": "application/x-www-form-urlencoded",
+                    "cache-control": "no-cache",
+                    "authorization": process.env.FAST2SMS_API_KEY
+                });
+                console.log(4)
                 f2s.query({
                     "sender_id": "SMSIND",
                     "language": "english",
@@ -30,16 +41,22 @@ router.post("/signup/verifyphone", (req, res) => {
                     "variables": "{#FF#}|{#BB#}",
                     "variables_values": `${trimName}|${otp}`
                 });
+                console.log(5)
                 f2s.end((f2sRes) => {
+                    console.log(6)
                     if (f2sRes.error){
+                        console.log(7)
                         console.log(f2sRes.error)
                         res.status(400).send("Failed")
                     } else{
+                        console.log(8)
                         client.set(`=${phone}`, otp, 'EX', 300);
                         console.log(f2sRes.body);
                         res.status(200).send("Succeed")
                     }
+                    console.log(9)
                 })
+                console.log(10)
             }
         }
     })
@@ -61,8 +78,7 @@ router.post("/signup", async (req, res) => {
             if(response !== otp) {
                 res.send("Invalid Code")
             } else {
-                const q = `INSERT INTO users (username, full_name, user_password, phone)
-                            VALUES('${username}', '${fullname}', '${hashedPassword}', ${phone})`
+                const q = `INSERT INTO users (username, full_name, user_password, phone) VALUES('${username}', '${fullname}', '${hashedPassword}', ${phone})`
                 connection.query(q, (error, rows1) => {
                     if (error) {
                         console.log(error)

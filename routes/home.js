@@ -5,6 +5,7 @@ const client = require('../databases/redis')
 const jwt = require("jsonwebtoken")
 
 router.get("/", authenticateHomeToken, (req, res, next) => {
+    console.log('happ')
     if (req.token) { res.cookie("accessToken", req.token, {httpOnly: true, secure: true}) }
     const userID = req.user.userID
     if (userID) {

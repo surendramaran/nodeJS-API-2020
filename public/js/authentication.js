@@ -23,7 +23,7 @@ document.getElementById("signupPhoneVerifyButton").addEventListener("click", ()=
     const name = document.getElementById("signupName").value
     const username = document.getElementById("signupUsername").value
     const password = document.getElementById("signupPassword").value
-    if (phone.length == 10 && !isNaN(phone) && name && username && password){
+    if (phone.length == 10 && name && username && password){
         const xhr = new XMLHttpRequest
         xhr.open('POST', '/signup/verifyphone')
         xhr.onreadystatechange = function(){
